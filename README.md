@@ -8,7 +8,7 @@
 
 ### Server side:
 
-- Send the device fingerprint that came with the form via the `payment.device_id` attribute of EBANX's API.
+- Send the device fingerprint that came with the form via the `payment.device_id` attribute of [EBANX's API](https://developers.ebanx.com/api-reference/direct-operation).
 
 ### Example code:
 

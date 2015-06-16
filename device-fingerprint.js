@@ -103,28 +103,6 @@
   if (localstorageGet('_conekta_session_id')) {
     session_id = localStorage.getItem('_conekta_session_id');
     fingerprint();
-  } else if (typeof Shopify !== 'undefined' && typeof Shopify.getCart !== 'undefined') {
-    getCartCallback = function(cart) {
-      session_id = cart['token'];
-      if (session_id !== null && session_id !== '') {
-        fingerprint();
-        send_beacon();
-        localstorageSet('_conekta_session_id', session_id);
-        localstorageSet('_conekta_session_id_timestamp', (new Date).getTime().toString());
-      }
-    };
-    Shopify.getCart(function(cart) {
-      getCartCallback(cart);
-    });
-    originalGetCart = Shopify.getCart;
-    Shopify.getCart = function(callback) {
-      var tapped_callback;
-      tapped_callback = function(cart) {
-        callback(cart);
-        getCartCallback(cart);
-      };
-      originalGetCart(tapped_callback);
-    };
   } else {
     useable_characters = "abcdefghijklmnopqrstuvwxyz0123456789";
     if (typeof crypto !== 'undefined' && typeof crypto.getRandomValues !== 'undefined') {

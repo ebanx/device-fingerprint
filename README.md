@@ -4,7 +4,7 @@
 
 - Add the [device-fingerprint.js](device-fingerprint.js) file to you checkout page
 - Add a hidden field to your form to send the device fingerprint to your server
-- Set you hidden field value to the value returned by the javascript `EBANX.deviceFingerprint()`
+- Set you hidden field value to the value returned by the `EBANX.deviceFingerprint()` function
 
 ### Server side:
 

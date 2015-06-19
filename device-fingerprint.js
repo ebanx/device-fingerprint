@@ -101,7 +101,7 @@
     }
   };
 
-  if (localstorageGet('_conekta_session_id')) {
+  if (localstorageGet('_conekta_session_id') && localstorageGet('_conekta_session_id_timestamp') && ((new Date).getTime() - 600000) < parseInt(localstorageGet('_conekta_session_id_timestamp'))) {
     session_id = localStorage.getItem('_conekta_session_id');
     fingerprint();
   } else {
@@ -119,6 +119,7 @@
       }
     }
     localstorageSet('_conekta_session_id', session_id);
+    localstorageSet('_conekta_session_id_timestamp', (new Date).getTime().toString());
     fingerprint();
   }
 

@@ -124,7 +124,7 @@
 
   getAntifraudConfig = function() {
     var error_callback, success_callback, unparsed_antifraud_config, url;
-    unparsed_antifraud_config = localstorageGet('conekta_antifraud_config');
+    unparsed_antifraud_config = '{"siftscience":{"beacon_key":"dce30e3c3b"}, "kount":{}}' || localstorageGet('conekta_antifraud_config');
     if (unparsed_antifraud_config && unparsed_antifraud_config.match(/^\{/)) {
       return antifraud_config = JSON.parse(unparsed_antifraud_config);
     } else {

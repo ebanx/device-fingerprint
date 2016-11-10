@@ -272,7 +272,7 @@
 
 }).call(this);
 
-window.ajax = $.ajax;
+window.ajax = jQuery.ajax;
 EBANX = {
   deviceFingerprint: function() {
     return Conekta._helpers.getSessionId();

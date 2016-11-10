@@ -263,8 +263,8 @@
       _helpers: {
         finger_printed: false,
         beacon_sent: false,
-        getSessionId: function() {
-          return session_id;
+        getSessionId: function(cb) {
+          typeof session_id !== "" ? cb(session_id) : setTimeout(function () {getSessionId(cb)}, 2000);
         }
       }
     };
@@ -272,9 +272,9 @@
 
 }).call(this);
 
-window.ajax = $.ajax;
+window.ajax = jQuery.ajax;
 EBANX = {
-  deviceFingerprint: function() {
-    return Conekta._helpers.getSessionId();
+  deviceFingerprint: function(cb) {
+    Conekta._helpers.getSessionId(cb);
   }
 };

@@ -26,7 +26,9 @@
 		<button>Submit</button>
 	</form>
 	<script>
-		document.getElementById("device_fingerprint").value = EBANX.deviceFingerprint();
+                EBANX.deviceFingerprint(function(session_id){
+                  document.getElementById("device_fingerprint").value = session_id;
+                });
 	</script>
 </body>
 </html>

@@ -37,7 +37,7 @@
 ```bash
 curl -X POST 'https://sandbox.ebanx.com/ws/direct' \
     -d 'request_body={
-          "integration_key": "fd29a3b39d8f7bffa31cecfe895236ba5b43683e225f9d4de78ac3bdca7dfb184abfed285cc99d5b13813672e586f9cf9eb8",
+          "integration_key": "your_test_integration_key_here",
           "operation": "request",
           "payment": {
             "name": "Juan Garcia",

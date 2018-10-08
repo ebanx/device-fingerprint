@@ -35,7 +35,7 @@
 ```
 
 ```bash
-curl -X POST 'https://sandbox.ebanx.com/ws/direct' \
+curl -X POST 'https://sandbox.ebanxpay.com/ws/direct' \
     -d 'request_body={
           "integration_key": "your_test_integration_key_here",
           "operation": "request",

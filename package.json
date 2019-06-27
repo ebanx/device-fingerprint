@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ebanx/device-fingerprint#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-load-plugins": "^1.4.0",
     "gulp-uglify": "^2.0.0"
   }
